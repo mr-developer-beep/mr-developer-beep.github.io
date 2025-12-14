@@ -18,8 +18,8 @@
 
 Use these details to access the Admin Panel:
 
-- **Username:** `hub2025`
-- **Password:** `admin123`
+- **Username:** `hub2024`
+- **Password:** `admin124`
 
 ## 🚀 How to Install (PWA)
 
