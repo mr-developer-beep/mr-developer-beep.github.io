@@ -2,7 +2,7 @@
 
 **Viral Deshi Hub** is a responsive, modern video platform showcasing trending content from Bangladesh. It serves as a Progressive Web App (PWA), allowing users to install it on their devices like a native app.
 
-🔗 **Live Website:** [Click Here to Watch](https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/)  
+🔗 **Live Website:** [Click Here to Watch](https://mr-developer-beep.github.io/viral-deshi-hub/)  
 *(Replace the link above with your actual GitHub Pages link)*
 
 ## ✨ Features
