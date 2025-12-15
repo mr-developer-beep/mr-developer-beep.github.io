@@ -1383,18 +1383,51 @@
     </footer>
 
     <!-- Video Player Modal -->
+
+<!-- YouTube Style Video Modal -->
     <div class="video-modal" id="videoModal">
         <div class="video-modal-content">
-            <div class="video-modal-header">
-                <h3 class="video-modal-title" id="modalVideoTitle">Video Title</h3>
-                <button class="close-video-modal" id="closeVideoModal">&times;</button>
-            </div>
-            <div class="video-player">
-                <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Close Button -->
+            <button class="close-video-modal" id="closeVideoModal">&times;</button>
+            
+            <div class="youtube-layout">
+                <!-- Left Side: Player & Info -->
+                <div class="main-player-section">
+                    <div class="video-player-wrapper">
+                        <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="current-video-info">
+                        <h2 id="modalVideoTitle">Video Title Goes Here</h2>
+                        <div class="video-stats-row">
+                            <div class="channel-info">
+                                <div class="channel-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 id="modalChannelName">Channel Name</h4>
+                                    <span class="sub-count">1.2M subscribers</span>
+                                </div>
+                                <button class="subscribe-btn">Subscribe</button>
+                            </div>
+                            <div class="video-actions-bar">
+                                <button><i class="fas fa-thumbs-up"></i> 12K</button>
+                                <button><i class="fas fa-share"></i> Share</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Up Next List -->
+                <div class="recommendation-sidebar">
+                    <h3>Up Next</h3>
+                    <div class="suggested-videos-list" id="suggestedVideosList">
+                        <!-- JavaScript দিয়ে এখানে ভিডিও লিস্ট লোড হবে -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+    
     <script>
         // Admin credentials (hidden from users)
         const ADMIN_CREDENTIALS = {
