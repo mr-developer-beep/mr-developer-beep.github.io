@@ -749,24 +749,27 @@
             margin-top: 30px;
         }
 
+        /* Netflix Style Video Card */
         .video-card {
-            background: var(--glass-bg);
-            border-radius: var(--border-radius);
+            background: #141414;
+            border-radius: 8px; /* একটু শার্প কর্নার */
             overflow: hidden;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
         }
 
         .video-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: var(--shadow-hover);
+            transform: scale(1.05); /* মাউস নিলে বড় হবে */
+            z-index: 10;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+            border-color: #ff2e63; /* বর্ডার কালার */
         }
 
         .thumbnail-container {
             position: relative;
-            height: 200px;
+            height: 180px; /* হাইট একটু কমানো হয়েছে */
             overflow: hidden;
         }
 
@@ -774,11 +777,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-
-        .video-card:hover .thumbnail {
-            transform: scale(1.1);
+            opacity: 0.9;
         }
 
         .play-btn-overlay {
@@ -790,65 +789,66 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to bottom, rgba(10, 14, 41, 0.3), rgba(10, 14, 41, 0.9));
+            background: rgba(0,0,0,0.3); /* হালকা কালো শেড */
             cursor: pointer;
-            transition: background 0.4s ease;
+            transition: background 0.3s;
+        }
+
+        .play-btn-overlay:hover {
+            background: rgba(0,0,0,0.1);
         }
 
         .play-btn {
-            width: 70px;
-            height: 70px;
-            background: var(--gradient-blue);
+            width: 50px;
+            height: 50px;
+            background: rgba(229, 9, 20, 0.9); /* Netflix Red */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: white;
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
-            transition: var(--transition);
-        }
-
-        .play-btn:hover {
-            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
         }
 
         .video-info {
-            padding: 25px;
+            padding: 15px;
+            background: linear-gradient(to top, #000 0%, #1a1a1a 100%);
         }
 
         .video-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text);
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
             line-height: 1.4;
+            /* লম্বা টাইটেল ২ লাইনে সীমাবদ্ধ রাখা */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .video-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: #a0a0a0;
+            margin-top: 10px;
         }
 
+        /* চ্যানেল আইকন বা বৃত্তাকার ছবি বাদ দেওয়া হয়েছে ক্লিন লুকের জন্য */
         .video-channel {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
         }
-
+        
+        /* চ্যানেল আইকন দরকার নেই, তাই ডিসপ্লে নান */
         .channel-icon {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: var(--gradient-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            color: white;
+            display: none;
         }
 
         .video-views {
